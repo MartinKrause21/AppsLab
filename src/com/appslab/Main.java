@@ -1,21 +1,25 @@
-package com.company;
+package com.appslab;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        double towerHeight = 100;
-        double stairHeight = 20;
-        double stairLenght = 5;
+        int a =  5;   //Integer.parseInt(bu.readLine());
+        int b =  5;  //Integer.parseInt(bu.readLine());
+        int c =  3;  //Integer.parseInt(bu.readLine());
 
-        double result;
+        if (a == b && b == c) {
+            System.out.print(3);
 
-        result = (towerHeight/stairHeight)*(stairHeight+stairLenght);
+        }
 
-        System.out.println(result);
+        else if (a == b || b == c || a == c  ) {
+            System.out.print(2);
+        }
 
-
-
+        else {
+            System.out.print(0);
+        }
 
     }
 }
