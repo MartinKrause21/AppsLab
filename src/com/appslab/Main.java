@@ -1,20 +1,31 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        double towerHeight = 100;
-        double stairHeight = 20;
-        double stairLenght = 5;
+        Scanner sc = new Scanner(System.in);
 
-        double result;
-
-        result = (towerHeight/stairHeight)*(stairHeight+stairLenght);
-
-        System.out.println(result);
+        System.out.println("Zadaj prve cislo: ");
+        int a = sc.nextInt() ;
 
 
+        System.out.println("Zadaj druhe cislo: ");
+        int b = sc.nextInt();
+
+
+        System.out.println("Zadaj tretie cislo: ");
+        int c = sc.nextInt() ;
+
+         if (a + b > c && b + c > a && a + c > b ) {
+            System.out.print("true");
+        }
+
+        else {
+            System.out.print("false");
+        }
 
 
     }
