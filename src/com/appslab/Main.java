@@ -8,18 +8,18 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Zadaj prve cislo: ");
-        int a = sc.nextInt() ;
+        System.out.println("Zadaj celkovy pocet kuskov: ");
+        int TotalSlices = sc.nextInt() ;
 
 
-        System.out.println("Zadaj druhe cislo: ");
-        int b = sc.nextInt();
+        System.out.println("Zadaj pocet osob: ");
+        int NoRecipients = sc.nextInt();
 
 
-        System.out.println("Zadaj tretie cislo: ");
-        int c = sc.nextInt() ;
+        System.out.println("Zadaj pocet kuskov pre osobu: ");
+        int SlicesEach = sc.nextInt() ;
 
-         if (a + b > c && b + c > a && a + c > b ) {
+         if (  NoRecipients*SlicesEach <= TotalSlices  ) {
             System.out.print("true");
         }
 
