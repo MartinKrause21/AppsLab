@@ -1,17 +1,31 @@
 package com.company;
 
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Random;
 
 public class Main {
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
 
-        int[] array = { 2, 3, 4, 5};
+            System.out.println(isPalindrome("reviver"));
 
-        for (int i = 0; i < array.length; i++) {
+            System.out.println(isPalindrome("shopping"));
 
-            int a = array.length;
-            System.out.println(array[i] * a);
+        }
+
+    public static boolean isPalindrome(String str){
+        StringBuilder sb=new StringBuilder(str);
+        sb.reverse();
+        String rev=sb.toString();
+
+        if(str.equals(rev)){
+            return true;
+        }
+
+        else{
+            return false;
         }
     }
+
 }
