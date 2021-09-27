@@ -1,35 +1,35 @@
 package com.company;
 
-
+import java.util.ArrayList;
+import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
-        winner("rock", "paper");
-        winner("scissors", "scissors");
-
+        int a []  = {2, 8, 7, 5};
+        warOfNumbers(a);
     }
 
-    private static void winner (String str01, String str02) {
+    private static void warOfNumbers (int [] a ) {
+        int sum01 = 0;
+        int sum02 = 0;
 
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 != 0) {
+                sum01 = sum01 + a[i];
+            }
 
-        if (str01.equals("scissors") && str02.equals("paper") ||
-                str01.equals("rock") && str02.equals("scissors") ||
-                str01.equals("paper") && str02.equals("rock")) {
+            else {
+                sum02 = sum02 + a[i];
+            }
 
-            System.out.println("Player 1 win");
         }
-
-        else if (str01.equals("rock") && str02.equals("paper") ||
-                str01.equals("scissors") && str02.equals("rock") ||
-                str01.equals("paper") && str02.equals("scissors")){
-
-            System.out.println("Player 2 win");
+        if (sum02 > sum01) {
+            System.out.println(sum01);
         }
-
         else {
-            System.out.println("TIE");
+            System.out.println(sum02);
         }
-
     }
+
 }
