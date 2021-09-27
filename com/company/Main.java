@@ -1,26 +1,34 @@
 package com.company;
 
-import java.util.Scanner;
+
 
 public class Main {
 
     public static void main(String[] args) {
+        winner("rock", "paper");
+        winner("scissors", "scissors");
 
-        Scanner sc = new Scanner(System.in);
+    }
 
-        System.out.println("zadaj slovo: ");
-        String word1= sc.nextLine();
-
-        System.out.println("zadaj slovo: ");
-        String word2= sc.nextLine();
+    private static void winner (String str01, String str02) {
 
 
-        if (word1.endsWith(word2)) {
-            System.out.println("true");
+        if (str01.equals("scissors") && str02.equals("paper") ||
+                str01.equals("rock") && str02.equals("scissors") ||
+                str01.equals("paper") && str02.equals("rock")) {
+
+            System.out.println("Player 1 win");
+        }
+
+        else if (str01.equals("rock") && str02.equals("paper") ||
+                str01.equals("scissors") && str02.equals("rock") ||
+                str01.equals("paper") && str02.equals("scissors")){
+
+            System.out.println("Player 2 win");
         }
 
         else {
-            System.out.println("false");
+            System.out.println("TIE");
         }
 
     }
