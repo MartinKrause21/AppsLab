@@ -1,35 +1,31 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 public class Main {
 
     public static void main(String[] args) {
-        int a []  = {2, 8, 7, 5};
-        warOfNumbers(a);
+
+
+        String[] rook1 = {"A8", "E8"};
+        String[] rook2 = {"B6", "A1"};
+        String[] rook3 = {"H3", "H6"};
+
+        System.out.print(RookAttack(rook1) + "\n");
+        System.out.print(RookAttack(rook2) + "\n");
+        System.out.print(RookAttack(rook3));
+
     }
 
-    private static void warOfNumbers (int [] a ) {
-        int sum01 = 0;
-        int sum02 = 0;
+     static boolean RookAttack(String[] rook) {
+        String rook1 = rook[0];
+        String rook2 = rook[1];
 
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] % 2 != 0) {
-                sum01 = sum01 + a[i];
-            }
-
-            else {
-                sum02 = sum02 + a[i];
-            }
-
+        if (rook1.charAt(0) == rook2.charAt(0) || rook1.charAt(1) == rook2.charAt(1))
+        {
+            return true;
         }
-        if (sum02 > sum01) {
-            System.out.println(sum01);
-        }
-        else {
-            System.out.println(sum02);
+        else
+        {
+            return false;
         }
     }
-
 }
